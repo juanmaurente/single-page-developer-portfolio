@@ -49,22 +49,20 @@ h3 {
 }
 
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 95%;
-	margin: 0 2rem;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 1.6rem;
 }
 
 @media screen and (min-width: 768px) {
 	.container {
 		justify-content: space-between;
+		padding: 0 3rem;
 	}
 }
 
 @media screen and (min-width: 1440px) {
 	.container {
-		justify-content: space-between;
 		margin: 0 auto;
 		max-width: 1100px;
 	}
@@ -72,7 +70,7 @@ h3 {
 
 /* Navbar */
 
-nav {
+.navbar-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -82,12 +80,14 @@ nav {
 }
 
 @media screen and (min-width: 768px) {
-	nav {
+	.navbar-container {
+		width: 100%;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: baseline;
 	}
 
-	.container-logo h3 {
+	.navbar-logo h3 {
 		font-size: 3.2rem;
 	}
 }
@@ -117,7 +117,7 @@ nav {
 }
 
 /* IMAGE */
-.image-container {
+.photo-container {
 	position: absolute;
 	top: 0px;
 	left: 0;
@@ -132,7 +132,7 @@ nav {
 }
 
 @media (min-width: 768px) {
-	.image-container img {
+	.photo-container img {
 		max-height: 600px;
 		margin-top: 0;
 		position: absolute;
@@ -142,7 +142,7 @@ nav {
 }
 
 @media (min-width: 1440px) {
-	.image-container {
+	.photo-container {
 		margin-top: 0;
 		position: absolute;
 		top: 0;
@@ -152,19 +152,21 @@ nav {
 }
 
 /* HERO CARD */
-/* .hero__card h1 {
-	position: absolute;
-	top: 800px;
-	right: 0;
-	left: 0;
-	margin: 0 auto;
-	width: 90vw;
+.card {
+	margin-top: 650px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	padding: 2rem;
+	text-align: center;
+	width: 100%;
 }
 
+.card-title h1 {
+	font-size: 4rem;
+	line-height: 4rem;
+	letter-spacing: -1.14px;
+}
 .card-welcome {
 	color: #fff;
 	font-size: 4rem;
@@ -172,75 +174,78 @@ nav {
 	line-height: 4rem;
 	letter-spacing: -1.14px;
 	font-weight: 700;
-	text-align: center;
 }
 
 .card-name {
 	text-decoration: underline;
-	text-decoration-color: #4ee1a0;
+	text-decoration-color: var(--color-Green);
 	text-decoration-thickness: 4px;
 	text-underline-offset: 10px;
 }
 
 .card-description {
+	padding-top: 2rem;
+	color: var(--color-Grey);
 	font-size: 1.6rem;
 	font-weight: 500;
 	line-height: 2.6rem;
-	text-align: center;
 }
 
 .card-button {
-	background-color: #000;
+	width: 13rem;
+	background-color: rgba(0, 0, 0, 0);
 	border: 0;
-	border-bottom: 3px solid #4ee1a0;
+	border-bottom: 2px solid var(--color-Green);
+	padding: 5rem 0 1.3rem 0;
+}
+
+.card-button a {
+	text-decoration: none;
+	text-transform: uppercase;
 	color: #fff;
 	font-size: 1.6rem;
 	letter-spacing: 2.29px;
 	line-height: 2.6rem;
-	margin: 10px 0 70px 0;
-	padding-bottom: 1.2rem;
-	text-transform: uppercase;
-	white-space: nowrap;
-	width: 12rem;
 }
 
-@media screen and (min-width: 768px) {
-	.hero__card {
-		position: absolute;
-		z-index: 2;
-		top: 150px;
-		right: 0;
-		left: 0;
-		margin: 0 30px;
-		width: 50vw;
+.card-button a:hover {
+	cursor: pointer;
+	color: var(--color-Green);
+}
+
+@media (min-width: 768px) {
+	.card {
+		margin-top: 0;
 		justify-content: left;
+		align-items: flex-start;
+		padding: 2rem;
+		text-align: left;
+		max-width: 60rem;
 	}
 
-	.card-welcome {
+	.card-title h1 {
 		font-size: 7.2rem;
-		margin-bottom: 2.4rem;
 		line-height: 7.2rem;
 		letter-spacing: -2.05px;
-		text-align: left;
 	}
 
 	.card-description {
-		font-size: 1.8em;
-		font-weight: 500;
-		line-height: 2.8rem;
-		text-align: left;
+		width: 44rem;
 	}
-	.card-button {
-		background-color: #000;
-		border: 0;
-		border-bottom: 3px solid #4ee1a0;
-		color: #fff;
-		font-size: 1.6rem;
-		letter-spacing: 2.29px;
-		line-height: 2.6rem;
-		margin: 10px 0 70px 0;
-		padding-bottom: 1.2rem;
-		text-transform: uppercase;
-		white-space: nowrap;
+}
+
+@media (min-width: 1440px) {
+	.card {
+		max-width: 70rem;
 	}
-} */
+
+	.card-description {
+		width: 44rem;
+	}
+
+	.card-title h1 {
+		font-size: 8.8rem;
+		line-height: 8.8rem;
+		letter-spacing: -2.5px;
+	}
+}
