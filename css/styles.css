@@ -310,7 +310,7 @@ h3 {
 }
 
 @media (min-width: 1440px) {
-	.grid {
+	.experience-container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
