@@ -1,16 +1,28 @@
 <div class="container">
+	<div class="photo-container">
+		<picture>
+			<source
+				media="(min-width: 1440px)"
+				srcset="./assets/images/image-profile-desktop.webp"
+			/>
+			<source media="(min-width: 768px)"
+			srcset="./assets/images/image-profile-tablet.webp"" />
+			<img src="./assets/images/image-profile-mobile.webp" alt="" />
+		</picture>
+	</div>
 	<div class="card">
 		<div class="card-title">
 			<h1>
-				Nice to meet you! I’m <br />
+				Nice to meet you! I’m
 				<span class="card-name">Adam Keyes.</span>
 			</h1>
 		</div>
-
 		<p class="card-description">
 			Based in the UK, I’m a front-end developer passionate about building
 			accessible web apps that users love.
 		</p>
-		<button class="card-button"><a href="">Contact me</a></button>
+		<button class="card-button">
+			<a href="">Contact me</a>
+		</button>
 	</div>
 </div>
