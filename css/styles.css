@@ -55,6 +55,9 @@ h3 {
 	padding: 0 3rem;
 }
 
+.container-dark-grey {
+	background-color: var(--color-Dark-Grey);
+}
 @media screen and (min-width: 1440px) {
 	.container {
 		margin: 0 auto;
@@ -202,7 +205,6 @@ h3 {
 }
 
 .card-button {
-	width: 13rem;
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
 	border-bottom: 2px solid var(--color-Green);
@@ -409,5 +411,94 @@ h3 {
 @media (min-width: 1440px) {
 	.project-image {
 		max-width: 540px;
+	}
+}
+
+/* Contact */
+.contact-container {
+	background-color: var(--color-Dark-Grey);
+	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding-top: 5rem;
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 5rem 3rem 0 3rem;
+	height: 70rem;
+}
+.contact-header h2 {
+	margin: 0;
+}
+
+.contact-container p {
+	color: var(--color-Grey);
+	font-size: 1.6rem;
+	line-height: 2.6rem;
+}
+
+form {
+	padding-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 9rem;
+	border-bottom: 1px solid var(--color-Grey);
+}
+
+form input,
+textarea {
+	background-color: #24242400;
+	border: 0;
+	border-bottom: 1px solid var(--color-Grey);
+	padding-bottom: 1.6rem;
+	padding-left: 2.4rem;
+	margin-bottom: 3.4rem;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.contact-button {
+	align-self: flex-end;
+}
+
+.footer {
+	height: 30rem;
+}
+
+@media (min-width: 768px) {
+	.contact-container {
+		max-width: 45rem;
+		border-bottom: 1px solid var(--color-Grey);
+	}
+
+	form {
+		border: 0;
+	}
+}
+
+@media (min-width: 1440px) {
+	.contact-container {
+		max-width: 1110px;
+		display: grid;
+		grid-template-columns: repeat(2, 45rem);
+		grid-gap: 22rem;
+		align-items: start;
+		padding-top: 5rem;
+		text-align: left;
+	}
+
+	.contact-header {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	form {
+		padding-top: 0;
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 1;
+		border: 0;
 	}
 }
