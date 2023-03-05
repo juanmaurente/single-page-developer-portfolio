@@ -447,12 +447,19 @@ form {
 
 form input,
 textarea {
+	color: var(--color-Grey);
 	background-color: #24242400;
 	border: 0;
 	border-bottom: 1px solid var(--color-Grey);
 	padding-bottom: 1.6rem;
 	padding-left: 2.4rem;
 	margin-bottom: 3.4rem;
+}
+
+form input:focus,
+textarea:focus {
+	color: var(--color-white);
+	padding: 2rem;
 }
 
 textarea {
